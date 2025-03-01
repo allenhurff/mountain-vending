@@ -39,7 +39,7 @@
           <p class="text-mountain-gray-700 mb-6">
             Interested in our services or have questions? We'd love to hear from you!
           </p>
-          <button class="btn-secondary">Get In Touch</button>
+          <NuxtLink to="/contact" class="btn-secondary">Get In Touch</NuxtLink>
         </div>
       </div>
     </div>

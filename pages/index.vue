@@ -9,8 +9,8 @@
           Your premium vending machine service for the San Bernardino Mountains.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button class="btn-primary">Our Services</button>
-          <button class="btn-outline">Contact Us</button>
+          <NuxtLink to="/services" class="btn-primary">Our Services</NuxtLink>
+          <NuxtLink to="/contact" class="btn-outline">Contact Us</NuxtLink>
         </div>
       </div>
       
@@ -55,7 +55,7 @@
           <p class="text-mountain-gray-700 mb-6">
             Own a business in the mountains? Contact us to explore placing a vending machine at your location.
           </p>
-          <button class="btn-secondary">Learn More</button>
+          <NuxtLink to="/contact" class="btn-secondary">Learn More</NuxtLink>
         </div>
       </div>
     </div>

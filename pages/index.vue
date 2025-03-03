@@ -1,181 +1,216 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-coke-red-500 text-white overflow-hidden">
-      <div class="container mx-auto px-4 py-16 md:py-24 relative">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div class="z-10">
-            <h2 class="text-xl md:text-2xl font-medium mb-4 uppercase">Mountain Vending</h2>
-            <h1 class="hero-text mb-6">
-              Refresh Your <span class="font-script">Mountain</span> Experience
+    <section class="relative bg-mountain-red-500 text-white">
+      <div class="container-custom py-16 md:py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Refresh Your Vending Experience
             </h1>
-            <p class="text-xl mb-8 max-w-xl">
-              Premium vending services throughout the San Bernardino Mountains, bringing refreshment to every adventure.
+            <p class="text-xl mb-8">
+              Discover premium vending machine solutions that elevate your business and delight your customers.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <NuxtLink to="/services" class="btn-white">Explore Services</NuxtLink>
-              <NuxtLink to="/locations" class="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-coke-red-500">Find Locations</NuxtLink>
+            <div class="flex flex-wrap gap-4">
+              <NuxtLink to="/products" class="btn-primary">
+                Explore Products
+              </NuxtLink>
+              <NuxtLink to="/contact" class="btn-secondary bg-white">
+                Contact Sales
+              </NuxtLink>
             </div>
           </div>
-          <div class="relative hidden md:block">
-            <!-- Placeholder for hero image -->
-            <div class="w-full h-96 bg-coke-red-400 rounded-2xl flex items-center justify-center">
-              <span class="text-white text-lg font-medium">Vending Machine Image</span>
+          <div class="relative">
+            <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-2xl">
+              <!-- Placeholder for hero image -->
+              <div class="bg-mountain-red-400 w-full h-full flex items-center justify-center">
+                <span class="text-xl font-semibold">Premium Vending Machine</span>
+              </div>
             </div>
-            <!-- Decorative elements -->
-            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-coke-red-600 rounded-full opacity-50"></div>
-            <div class="absolute -top-10 -left-10 w-24 h-24 bg-coke-red-600 rounded-full opacity-50"></div>
           </div>
         </div>
-        
-        <!-- Decorative shapes (Coca-Cola style) -->
-        <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-coke-red-600 rounded-full opacity-20"></div>
-        <div class="absolute top-0 right-0 w-48 h-48 bg-coke-red-600 rounded-full opacity-20"></div>
+      </div>
+      
+      <!-- Wave Divider -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 0L48 8.33333C96 16.6667 192 33.3333 288 41.6667C384 50 480 50 576 41.6667C672 33.3333 768 16.6667 864 16.6667C960 16.6667 1056 33.3333 1152 41.6667C1248 50 1344 50 1392 50L1440 50V100H1392C1344 100 1248 100 1152 100C1056 100 960 100 864 100C768 100 672 100 576 100C480 100 384 100 288 100C192 100 96 100 48 100H0V0Z" fill="white"/>
+        </svg>
       </div>
     </section>
     
     <!-- Features Section -->
-    <section class="py-16 md:py-24">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-coke-black-900">
-            Why Choose <span class="text-coke-red-500">Mountain Vending</span>
-          </h2>
-          <p class="subtitle">
-            We bring quality refreshments to every corner of the mountains.
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="card group hover:border-coke-red-500 transition-all">
-            <div class="text-coke-red-500 text-3xl mb-6">
-              <div class="w-16 h-16 rounded-full bg-coke-red-50 flex items-center justify-center group-hover:bg-coke-red-100 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-coke-black-800 group-hover:text-coke-red-500 transition-colors">Premium Products</h3>
-            <p class="text-coke-black-600">We stock our machines with quality snacks and beverages that mountain visitors love and crave.</p>
-          </div>
-          
-          <div class="card group hover:border-coke-red-500 transition-all">
-            <div class="text-coke-red-500 text-3xl mb-6">
-              <div class="w-16 h-16 rounded-full bg-coke-red-50 flex items-center justify-center group-hover:bg-coke-red-100 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-coke-black-800 group-hover:text-coke-red-500 transition-colors">Strategic Locations</h3>
-            <p class="text-coke-black-600">Our machines are strategically placed throughout the San Bernardino mountain communities.</p>
-          </div>
-          
-          <div class="card group hover:border-coke-red-500 transition-all">
-            <div class="text-coke-red-500 text-3xl mb-6">
-              <div class="w-16 h-16 rounded-full bg-coke-red-50 flex items-center justify-center group-hover:bg-coke-red-100 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-coke-black-800 group-hover:text-coke-red-500 transition-colors">Reliable Service</h3>
-            <p class="text-coke-black-600">We maintain our machines regularly to ensure they're always stocked and functioning properly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Partnership CTA Section -->
-    <section class="py-16 bg-coke-black-900 text-white">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
-          <div class="md:col-span-3">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-              Partner With <span class="text-coke-red-500">Mountain Vending</span>
-            </h2>
-            <p class="text-xl text-coke-white-600 mb-8 max-w-xl">
-              Own a business in the mountains? Increase customer satisfaction and generate additional revenue by hosting one of our premium vending machines.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <NuxtLink to="/contact" class="btn-primary">Contact Us</NuxtLink>
-              <NuxtLink to="/services" class="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-coke-black-900">Learn More</NuxtLink>
-            </div>
-          </div>
-          <div class="md:col-span-2 relative">
-            <!-- Placeholder for partnership image -->
-            <div class="w-full h-64 bg-coke-black-800 rounded-2xl flex items-center justify-center">
-              <span class="text-white text-lg font-medium">Partnership Image</span>
-            </div>
-            <!-- Decorative elements -->
-            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-coke-red-500 rounded-full opacity-50"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Testimonial Section -->
-    <section class="py-16 md:py-24">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-coke-black-900">
-            What Our <span class="text-coke-red-500">Partners Say</span>
-          </h2>
-        </div>
+    <section class="py-16 bg-white">
+      <div class="container-custom">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Why Choose Mountain Vending?
+        </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="card bg-coke-red-50 border-coke-red-200">
-            <div class="text-coke-red-500 mb-4">
-              ★★★★★
+          <div class="bg-mountain-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="w-16 h-16 rounded-full bg-mountain-red-100 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-mountain-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
             </div>
-            <p class="text-coke-black-700 mb-6 italic">
-              "Mountain Vending has been a great addition to our resort. Our guests love having convenient access to quality snacks and drinks."
+            <h3 class="text-xl font-bold mb-2">Premium Quality</h3>
+            <p class="text-mountain-gray-600">
+              Our vending machines are built with high-quality materials and cutting-edge technology for reliability and longevity.
             </p>
-            <div class="font-bold text-coke-black-800">
-              Sarah T.
-            </div>
-            <div class="text-coke-black-600 text-sm">
-              Lake Arrowhead Resort Manager
-            </div>
           </div>
           
-          <div class="card bg-coke-red-50 border-coke-red-200">
-            <div class="text-coke-red-500 mb-4">
-              ★★★★★
+          <div class="bg-mountain-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="w-16 h-16 rounded-full bg-mountain-red-100 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-mountain-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+              </svg>
             </div>
-            <p class="text-coke-black-700 mb-6 italic">
-              "The team at Mountain Vending provides exceptional service. They keep the machines well-stocked and respond quickly to any requests."
+            <h3 class="text-xl font-bold mb-2">Customizable Solutions</h3>
+            <p class="text-mountain-gray-600">
+              Personalize your vending machines with custom branding, product selections, and smart features.
             </p>
-            <div class="font-bold text-coke-black-800">
-              Michael R.
-            </div>
-            <div class="text-coke-black-600 text-sm">
-              Big Bear Recreation Center
-            </div>
           </div>
           
-          <div class="card bg-coke-red-50 border-coke-red-200">
-            <div class="text-coke-red-500 mb-4">
-              ★★★★★
+          <div class="bg-mountain-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="w-16 h-16 rounded-full bg-mountain-red-100 flex items-center justify-center mb-4">
+              <svg class="w-8 h-8 text-mountain-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
-            <p class="text-coke-black-700 mb-6 italic">
-              "Adding a Mountain Vending machine to our lobby has been great for both our guests and our business. It's a win-win partnership."
+            <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+            <p class="text-mountain-gray-600">
+              Our dedicated team provides round-the-clock support to ensure your vending machines operate flawlessly.
             </p>
-            <div class="font-bold text-coke-black-800">
-              Jennifer K.
-            </div>
-            <div class="text-coke-black-600 text-sm">
-              Running Springs Hotel Owner
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Products Showcase -->
+    <section class="py-16 bg-mountain-gray-50">
+      <div class="container-custom">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Our Popular Vending Machines
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-for="product in featuredProducts" :key="product.id" class="group">
+            <div class="bg-white rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
+              <div class="aspect-w-1 aspect-h-1 bg-mountain-gray-200">
+                <!-- Product image placeholder -->
+                <div class="w-full h-full flex items-center justify-center bg-mountain-gray-100">
+                  <span class="text-lg font-medium text-mountain-gray-500">{{ product.name }}</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 group-hover:text-mountain-red-500 transition-colors duration-300">
+                  {{ product.name }}
+                </h3>
+                <p class="text-mountain-gray-600 mb-4">
+                  {{ product.description }}
+                </p>
+                <NuxtLink :to="`/products/${product.id}`" class="inline-flex items-center font-semibold text-mountain-red-500 hover:text-mountain-red-600">
+                  Learn More
+                  <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </NuxtLink>
+              </div>
             </div>
           </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <NuxtLink to="/products" class="btn-primary">
+            View All Products
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+      <div class="container-custom">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          What Our Clients Say
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div v-for="testimonial in testimonials" :key="testimonial.id" class="bg-mountain-gray-50 rounded-xl p-8 shadow-md">
+            <div class="flex items-start mb-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-mountain-red-100 rounded-full flex items-center justify-center text-mountain-red-500 font-bold">
+                  {{ testimonial.author.charAt(0) }}
+                </div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold">{{ testimonial.author }}</h4>
+                <p class="text-mountain-gray-600">{{ testimonial.company }}</p>
+              </div>
+            </div>
+            <p class="text-mountain-gray-700 italic">
+              "{{ testimonial.content }}"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-mountain-red-500 text-white">
+      <div class="container-custom text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Transform Your Vending Experience?
+        </h2>
+        <p class="text-xl max-w-3xl mx-auto mb-8">
+          Contact our team today to discover how Mountain Vending can provide the perfect vending solution for your business.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <NuxtLink to="/contact" class="btn bg-white text-mountain-red-500 hover:bg-mountain-gray-100">
+            Get in Touch
+          </NuxtLink>
+          <NuxtLink to="/products" class="btn border-2 border-white text-white hover:bg-mountain-red-600">
+            Explore Products
+          </NuxtLink>
         </div>
       </div>
     </section>
   </div>
 </template>
 
-<script>
-export default {
-};
+<script setup lang="ts">
+// Sample data for featured products
+const featuredProducts = [
+  {
+    id: 'beverage-pro',
+    name: 'Beverage Pro X1',
+    description: 'Our flagship beverage vending machine with smart temperature control and touchless payment options.',
+  },
+  {
+    id: 'snack-master',
+    name: 'Snack Master 3000',
+    description: 'The ultimate snack vending solution with customizable shelving and digital inventory management.',
+  },
+  {
+    id: 'combo-elite',
+    name: 'Combo Elite Series',
+    description: 'A versatile combination machine offering both beverages and snacks in one sleek unit.',
+  },
+];
+
+// Sample testimonials
+const testimonials = [
+  {
+    id: 1,
+    author: 'Sarah Johnson',
+    company: 'TechStart Inc.',
+    content: 'Mountain Vending transformed our office break area with their sleek, reliable machines. Our team loves the diverse product options, and the customer service has been exceptional.',
+  },
+  {
+    id: 2,
+    author: 'Michael Chen',
+    company: 'Pacific University',
+    content: 'We\'ve partnered with Mountain Vending across our campus locations, and the response has been overwhelmingly positive. Their machines are reliable, and the support team is always responsive.',
+  },
+];
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="flex flex-col min-h-screen">
     <Header />
     <main class="flex-grow">
       <NuxtPage />
@@ -7,3 +7,7 @@
     <Footer />
   </div>
 </template>
+
+<script setup lang="ts">
+// App-wide setup logic can go here
+</script>

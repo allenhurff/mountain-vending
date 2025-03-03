@@ -1,51 +1,87 @@
 <template>
-  <header class="bg-white text-coke-black-900 border-b border-coke-white-800 sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
-      <div class="flex items-center mb-3 sm:mb-0">
-        <NuxtLink to="/" class="text-3xl font-display font-bold tracking-tight text-coke-red-500">
-          Mountain
-          <span class="font-script">Vending</span>
-        </NuxtLink>
+  <header class="bg-white shadow-md relative z-10">
+    <div class="container-custom py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <NuxtLink to="/" class="flex items-center">
+            <span class="text-mountain-red-500 font-heading font-bold text-2xl md:text-3xl">Mountain Vending</span>
+          </NuxtLink>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <NuxtLink 
+            v-for="item in navigationItems" 
+            :key="item.name" 
+            :to="item.href"
+            class="font-medium text-mountain-gray-600 hover:text-mountain-red-500 transition-colors duration-300"
+          >
+            {{ item.name }}
+          </NuxtLink>
+        </nav>
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button 
+            @click="isMobileMenuOpen = !isMobileMenuOpen" 
+            class="text-mountain-gray-600 hover:text-mountain-red-500 focus:outline-none"
+          >
+            <svg 
+              v-if="!isMobileMenuOpen" 
+              class="h-6 w-6" 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg 
+              v-else 
+              class="h-6 w-6" 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
       </div>
-      
-      <!-- Mobile menu button (hidden on larger screens) -->
-      <button class="sm:hidden rounded-full p-2 hover:bg-coke-white-700 transition-all">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-      
-      <!-- Desktop navigation -->
-      <nav class="hidden sm:flex flex-wrap justify-center gap-x-8 gap-y-2 items-center">
-        <NuxtLink to="/" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium">About</NuxtLink>
-        <NuxtLink to="/services" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium">Services</NuxtLink>
-        <NuxtLink to="/products" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium">Products</NuxtLink>
-        <NuxtLink to="/locations" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium">Locations</NuxtLink>
-        <NuxtLink to="/contact" class="btn-primary py-2 px-4">Contact</NuxtLink>
-      </nav>
     </div>
     
-    <!-- Mobile navigation (hidden by default) -->
-    <div class="hidden">
-      <nav class="flex flex-col px-4 py-2 space-y-3 pb-4">
-        <NuxtLink to="/" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium py-2">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium py-2">About</NuxtLink>
-        <NuxtLink to="/services" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium py-2">Services</NuxtLink>
-        <NuxtLink to="/products" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium py-2">Products</NuxtLink>
-        <NuxtLink to="/locations" class="text-coke-black-800 hover:text-coke-red-500 transition-colors font-medium py-2">Locations</NuxtLink>
-        <NuxtLink to="/contact" class="btn-primary w-full justify-center">Contact</NuxtLink>
-      </nav>
+    <!-- Mobile Navigation -->
+    <div 
+      v-if="isMobileMenuOpen" 
+      class="md:hidden bg-white border-t border-mountain-gray-200 py-2"
+    >
+      <div class="container-custom space-y-1">
+        <NuxtLink 
+          v-for="item in navigationItems" 
+          :key="item.name" 
+          :to="item.href"
+          class="block py-2 font-medium text-mountain-gray-600 hover:text-mountain-red-500 transition-colors duration-300"
+          @click="isMobileMenuOpen = false"
+        >
+          {{ item.name }}
+        </NuxtLink>
+      </div>
     </div>
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      mobileMenuOpen: false
-    }
-  }
-}
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const isMobileMenuOpen = ref(false);
+
+const navigationItems = [
+  { name: 'Products', href: '/products' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Customize', href: '/customize' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+];
 </script>

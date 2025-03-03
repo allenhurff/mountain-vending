@@ -11,31 +11,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'mountain-blue': {
-          50: '#EBF5FF',
-          100: '#E1EFFE',
-          200: '#C3DDFD',
-          300: '#A4CAFE',
-          400: '#76A9FA',
-          500: '#3F83F8',
-          600: '#1E3A8A', // Original mountain-blue
-          700: '#1A54B1',
-          800: '#1E429F',
-          900: '#233876',
+        'coke-red': {
+          50: '#FFEBEE',
+          100: '#FFCDD2',
+          200: '#EF9A9A',
+          300: '#E57373',
+          400: '#EF5350',
+          500: '#F40009', // Coca-Cola Red
+          600: '#D50000',
+          700: '#C62828',
+          800: '#B71C1C',
+          900: '#8E0000',
         },
-        'mountain-green': {
-          50: '#F3FAF7',
-          100: '#DEF7EC',
-          200: '#BCF0DA',
-          300: '#84E1BC',
-          400: '#31C48D',
-          500: '#0E9F6E',
-          600: '#057A55',
-          700: '#046C4E',
-          800: '#03543F',
-          900: '#014737',
-        },
-        'mountain-gray': {
+        'coke-black': {
           50: '#F9FAFB',
           100: '#F3F4F6',
           200: '#E5E7EB',
@@ -47,10 +35,23 @@ module.exports = {
           800: '#1F2937',
           900: '#111827',
         },
+        'coke-white': {
+          50: '#FFFFFF',
+          100: '#FFFFFF',
+          200: '#FFFFFF',
+          300: '#FFFFFF',
+          400: '#FFFFFF',
+          500: '#FFFFFF',
+          600: '#F5F5F5',
+          700: '#EEEEEE',
+          800: '#E0E0E0',
+          900: '#BDBDBD',
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Montserrat', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['TCCC-UnityText', 'Gotham', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['TCCC-UnityHeadline', 'Gotham', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        script: ['TCCC-UnityHandwriting', 'cursive'],
       },
       boxShadow: {
         card: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',

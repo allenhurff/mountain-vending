@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-mountain-gray-50 text-mountain-gray-800 font-sans;
+    @apply bg-white text-coke-black-800 font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold;
@@ -16,24 +16,36 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-200 text-base;
   }
   .btn-primary {
-    @apply btn bg-mountain-blue-600 text-white hover:bg-mountain-blue-700;
+    @apply btn bg-coke-red-500 text-white hover:bg-coke-red-600;
   }
   .btn-secondary {
-    @apply btn bg-mountain-green-500 text-white hover:bg-mountain-green-600;
+    @apply btn bg-coke-black-900 text-white hover:bg-coke-black-800;
   }
   .btn-outline {
-    @apply btn border border-mountain-blue-600 text-mountain-blue-600 hover:bg-mountain-blue-50;
+    @apply btn border-2 border-coke-red-500 text-coke-red-500 hover:bg-coke-red-50;
+  }
+  .btn-white {
+    @apply btn bg-white text-coke-red-500 hover:bg-coke-white-700;
   }
   .container-page {
     @apply container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8;
   }
   .card {
-    @apply bg-white rounded-xl shadow-card p-6 hover:shadow-card-hover transition-shadow duration-300;
+    @apply bg-white rounded-2xl shadow-none p-6 hover:shadow-lg transition-all duration-300 border border-coke-white-800;
   }
   .section {
-    @apply py-12 md:py-16;
+    @apply py-16 md:py-24;
+  }
+  .hero-text {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold;
+  }
+  .subtitle {
+    @apply text-xl md:text-2xl font-medium text-coke-black-600;
+  }
+  .script-text {
+    @apply font-script text-coke-red-500;
   }
 }

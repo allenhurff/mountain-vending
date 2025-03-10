@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   css: ['~/assets/css/main.css'],
 
+  plugins: ['~/plugins/amplify.ts'],
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',

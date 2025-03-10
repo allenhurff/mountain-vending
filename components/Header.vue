@@ -5,6 +5,7 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <NuxtLink to="/" class="flex items-center">
+            <img src="~/assets/images/branding/logo-512px.png" alt="Mountain Vending Logo" class="h-10 w-auto mr-2" />
             <span class="text-mountain-red-500 font-heading font-bold text-2xl md:text-3xl">Mountain Vending</span>
           </NuxtLink>
         </div>

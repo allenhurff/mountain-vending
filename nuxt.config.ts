@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   css: ['~/assets/css/main.css'],
 
-  plugins: ['~/plugins/amplify.ts'],
+  plugins: [],
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
@@ -29,6 +29,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', size: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon-16X16.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap' }

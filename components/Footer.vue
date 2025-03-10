@@ -4,7 +4,10 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Company Info -->
         <div class="col-span-1">
-          <h3 class="text-xl font-bold mb-4">Mountain Vending</h3>
+          <div class="flex items-center mb-4">
+            <img src="~/assets/images/branding/logo-512px.png" alt="Mountain Vending Logo" class="h-8 w-auto mr-2" />
+            <h3 class="text-xl font-bold">Mountain Vending</h3>
+          </div>
           <p class="text-mountain-gray-300">
             Premium vending machine solutions for businesses of all sizes.
           </p>

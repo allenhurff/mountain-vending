@@ -19,15 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Claude CLI
+        run: npm install -g @anthropic-ai/claude-cli
+
       - name: Run Claude Linter
         env:
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: |
-          git diff HEAD~1 HEAD | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.'
-
-      # Placeholder for tests (can be added later)
-      # - name: Run tests
-      #   run: npm test
+          git diff $(git rev-parse HEAD^)..HEAD || true | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.'
 
   deploy:
     needs: lint_and_test

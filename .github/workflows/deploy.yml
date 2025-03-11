@@ -19,14 +19,42 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Claude CLI
-        run: npm install -g @anthropic-ai/claude-cli
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
-      - name: Run Claude Linter
+      - name: Install Claude SDK
+        run: |
+          pip install anthropic
+
+      - name: Run Claude Linter (Using Python SDK)
         env:
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: |
-          git diff $(git rev-parse HEAD^)..HEAD || true | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.'
+          git diff $(git rev-parse HEAD^)..HEAD || true > diff.txt
+          python -c "
+import os
+import anthropic
+
+client = anthropic.Anthropic(api_key=os.environ['CLAUDE_API_KEY'])
+
+with open('diff.txt') as f:
+    diff_content = f.read()
+
+response = client.messages.create(
+    model='claude-3-haiku-20240307',
+    max_tokens=400,
+    temperature=0,
+    system='you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.',
+    messages=[{'role':'user', 'content': diff_content}]
+)
+
+output = response.content[0].text.strip()
+if output.lower() != 'no issues found.':
+    print(output)
+    exit(1)
+"
 
   deploy:
     needs: lint_and_test

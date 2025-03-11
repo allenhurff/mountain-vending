@@ -15,8 +15,8 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "lint:claude": "git diff main | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.'",
-    "lint:claude2file": "git diff main | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.' > claude-lint-report.txt",
+    "lint:claude": "git diff master | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.'",
+    "lint:claude2file": "git diff master | claude -p 'you are a linter. please review the following code changes for typos. report the filename and line number on one line, and a description of the issue on the second line. do not return any other text.' > claude-lint-report.txt",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

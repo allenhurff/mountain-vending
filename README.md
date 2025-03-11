@@ -1,75 +1,80 @@
-# Nuxt Minimal Starter
+# Mountain Vending
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Mountain Vending Logo](/assets/images/branding/logo-512px.png)
 
-## Setup
+A premium vending machine solutions website built with Nuxt.js and Tailwind CSS.
 
-Make sure to install dependencies:
+## 🏔️ About Mountain Vending
+
+Mountain Vending offers premium vending machine solutions that elevate businesses and delight customers. Our platform showcases our range of high-quality vending machines, customizable options, and exceptional customer support.
+
+### Key Features
+
+- **Product Showcase**: Browse our catalog of premium vending machines
+- **Machine Customizer**: Personalize vending machines with custom branding and product selections
+- **ROI Calculator**: Calculate potential return on investment for your vending machine
+- **Product Comparison**: Compare different vending machine models to find the perfect fit
+
+## 🚀 Technology Stack
+
+- **Nuxt.js 3**: Vue-based framework for building modern web applications
+- **Vue 3**: Progressive JavaScript framework
+- **Tailwind CSS**: Utility-first CSS framework
+- **Pinia**: State management for Vue applications
+
+## 💻 Development
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm, yarn, pnpm, or bun
+
+### Setup
 
 ```bash
-# npm
+# Install dependencies
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
+# or
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Development Server
 
 ```bash
-# npm
+# Start development server at http://localhost:3000
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
+# or
 bun run dev
 ```
 
-## Production
-
-Build the application for production:
+### Production
 
 ```bash
-# npm
+# Build the application
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
+# or
 bun run build
-```
 
-Locally preview production build:
-
-```bash
-# npm
+# Preview production build
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
+# or
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Linting
+
+```bash
+# Lint code changes using Claude
+npm run lint:claude
+
+# Lint and save report to file
+npm run lint:claude2file
+```
+
+## 📄 License
+
+All rights reserved. This project is proprietary and confidential.
+
+## 📞 Contact
+
+For inquiries about Mountain Vending, please [contact our sales team](https://mountainvending.com/contact).
